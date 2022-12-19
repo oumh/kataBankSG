@@ -1,22 +1,18 @@
-package org.bank.kata.app.app;
+package org.bank.kata.app;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
+@AllArgsConstructor
 public class StatementLine implements Comparable<StatementLine> {
 
   private LocalDateTime dateTime;
   private BigDecimal amount;
   private StatementKind direction;
-
-  public StatementLine(LocalDateTime dateTime, BigDecimal amount, StatementKind direction) {
-    this.dateTime = dateTime;
-    this.amount = amount;
-    this.direction = direction;
-  }
 
   
   @Override

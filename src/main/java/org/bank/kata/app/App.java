@@ -1,4 +1,4 @@
-package org.bank.kata.app.app;
+package org.bank.kata.app;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -15,7 +15,7 @@ public class App {
   public static final String ANSI_RED = "\u001B[31m";
   public static final String ANSI_GREEN = "\u001B[32m";
   public static final String SIGN_PLUS = "+";
-  public static final String SIGN_MOINS = "-";
+
   public static final DecimalFormat AMOUNT_FORMATER = new DecimalFormat("0.00");
   public static final DateTimeFormatter DATETIME_FORMATTER_MONTH = DateTimeFormatter.ofPattern("LLL");
   public static final DateTimeFormatter DATETIME_FORMATTER_DAY = DateTimeFormatter.ofPattern("E d HH:mm:ss");
@@ -25,18 +25,13 @@ public class App {
   public static Bank bank = new Bank();
 
 
-  public static void clearScreen() {
-    /*System.out.print("\033[H\033[2J");
-    System.out.flush();*/
-  }
 
-  public static int getDesiredOperation() {
+  private  int getDesiredOperation() {
     displayAvailableOperationsMenu();
-    clearScreen();
     return getIdFromKeyBoard();
   }
 
-  private static void displayAvailableOperationsMenu() {
+  private  void displayAvailableOperationsMenu() {
     String menu = """
 
           ########## CHOOSE AN OPERATION ##############
@@ -50,12 +45,12 @@ public class App {
 
   }
 
-  static int getIdFromKeyBoard() {
+  private int getIdFromKeyBoard() {
     Scanner consoleIn = new Scanner(System.in);
     return consoleIn.nextInt();
   }
 
-  static BigDecimal getAmountFromKeyBoard() {
+  private BigDecimal getAmountFromKeyBoard() {
     Scanner consoleIn = new Scanner(System.in);
     if (consoleIn.hasNextBigDecimal())
       return consoleIn.nextBigDecimal();
@@ -173,7 +168,6 @@ public class App {
     System.out.println();
     System.out.println();
     System.out.print(" Please enter your accound id (integer , ex: 14528 ): ");
-    clearScreen();
     return getIdFromKeyBoard();
   }
 

@@ -1,7 +1,6 @@
-package org.bank.kata.app;
+package org.bank.kata;
 
-import org.bank.kata.app.app.App;
-
+import org.bank.kata.app.App;
 public class Main {
 
   public static void main(String[] args) {

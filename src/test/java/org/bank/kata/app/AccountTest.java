@@ -1,9 +1,9 @@
 package org.bank.kata.app;
 
 import org.assertj.core.api.Assertions;
-import org.bank.kata.app.app.Account;
-import org.bank.kata.app.app.StatementLine;
-import org.bank.kata.app.app.App;
+import org.bank.kata.app.Account;
+import org.bank.kata.app.StatementLine;
+import org.bank.kata.app.App;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package org.bank.kata.app.app;
+package org.bank.kata.app;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
